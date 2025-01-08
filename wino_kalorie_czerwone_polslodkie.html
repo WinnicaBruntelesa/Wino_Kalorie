@@ -13,12 +13,29 @@
         .spacer {
             height: 20px;
         }
-        img {
-            width: 50%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+        .content {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        .content img {
+            width: 40%;
+            max-width: 300px;
+            margin-right: 20px;
+        }
+        .content-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.4; /* Mniejsze odstępy między liniami */
+        }
+        .content-text h2 {
+            margin: 0;
+            font-size: 1.2em; /* Mniejszy nagłówek */
+            font-weight: bold;
+        }
+        .content-text p {
+            margin-top: 10px;
+            text-align: justify;
         }
         table {
             width: 100%;
@@ -50,14 +67,14 @@
             color: red;
         }
         @media (max-width: 600px) {
-            body {
-                font-size: 14px;
+            .content {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            table {
-                font-size: 12px;
-            }
-            .ingredients {
-                font-size: 14px;
+            .content img {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -68,8 +85,16 @@
 
     <div class="spacer"></div>
 
-    <img src="czerwone_pol_slodkie.png" alt="Zdjęcie wina">
-
+    <div class="content">
+        <img src="czerwone_polslodkie.png" alt="Zdjęcie wina">
+        <div class="content-text">
+            <h2>Wino czerwone półsłodkie</h2>
+            <p>Jest doskonałym dopełnieniem deserów. Daje możliwość posmakowania szczególnego miejsca ziemi - położonej na
+			na pograniczu polsko-czeskim nieopodal rzeki Olzy - Winnicy Bruntelesa, gdzie tworzone z wielką pieczołowitością
+			i starannością. Aromat i smak wina komponowane są tu przez strategię produkcji i mieszania, 
+			intrygując swymi nieoczekiwanymi połączeniami.</p>
+        </div>
+    </div>
 
     <table>
         <thead>

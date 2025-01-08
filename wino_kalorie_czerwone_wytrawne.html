@@ -13,12 +13,29 @@
         .spacer {
             height: 20px;
         }
-        img {
-            width: 50%;
-            max-width: 600px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+        .content {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0;
+        }
+        .content img {
+            width: 40%;
+            max-width: 300px;
+            margin-right: 20px;
+        }
+        .content-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.4; /* Mniejsze odstępy między liniami */
+        }
+        .content-text h2 {
+            margin: 0;
+            font-size: 1.2em; /* Mniejszy nagłówek */
+            font-weight: bold;
+        }
+        .content-text p {
+            margin-top: 10px;
+            text-align: justify;
         }
         table {
             width: 100%;
@@ -50,26 +67,33 @@
             color: red;
         }
         @media (max-width: 600px) {
-            body {
-                font-size: 14px;
+            .content {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            table {
-                font-size: 12px;
-            }
-            .ingredients {
-                font-size: 14px;
+            .content img {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <p>Wino gronowe czerwone wytrawne<br>
+    <p>Wino gronowe czerwone wytrwane<br>
     <strong>Producent:</strong> Winnica Bruntelesa</p>
 
     <div class="spacer"></div>
 
-    <img src="czerwone_wytrawne.png" alt="Zdjęcie wina">
-
+    <div class="content">
+        <img src="czerwone_wytrawne.png" alt="Zdjęcie wina">
+        <div class="content-text">
+            <h2>Wino czerwone wytrawne</h2>
+            <p>Pasuje do dziczyzny, czerwonego mięsa, kasz, potraw mącznych. Jego smak i aromat mówią
+			o historii winnicy. Proces wytwarzania wina jest pasją, radością tworzenia, zamiłowaniem, 
+			co widać i czuć w każdej kropelce wina komponowanego od 2012 roku w Winnicy Bruntelesa</p>
+        </div>
+    </div>
 
     <table>
         <thead>
